@@ -4,7 +4,11 @@
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/ms-consulta/pom.xml" />
+=======
+        <option value="$PROJECT_DIR$/ms-biblioteca/pom.xml" />
+>>>>>>> 931b7afff7892cd9e2a28a8a335e199432892c34
       </list>
     </option>
   </component>

@@ -6,13 +6,21 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+<<<<<<< HEAD
         <module name="ms-consulta" />
+=======
+        <module name="ms-biblioteca" />
+>>>>>>> 931b7afff7892cd9e2a28a8a335e199432892c34
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+<<<<<<< HEAD
       <module name="ms-consulta" options="-parameters" />
+=======
+      <module name="ms-biblioteca" options="-parameters" />
+>>>>>>> 931b7afff7892cd9e2a28a8a335e199432892c34
     </option>
   </component>
 </project>
