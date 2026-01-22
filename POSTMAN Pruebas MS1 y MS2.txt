@@ -1,0 +1,53 @@
+SI USAS CIRCUIT BREAKER + TIME LIMITER
+NO DEBES USAR FEIGN FALLBACK
+
+POSTMAN Pruebas MS1 y MS2
+
+Ingresar usuario (OK)
+POST http://localhost:8080/biblioteca/ingresar
+{
+  "codigo": "ABC12345"
+}
+
+Error 422 – Código inválido
+POST http://localhost:8080/biblioteca/ingresar
+{
+  "codigo": "ABCDEFGH"
+}
+
+Error 401 – Aforo lleno- Se tiene que llenar con varios ejemplos para que de este error
+POST http://localhost:8080/biblioteca/ingresar
+{
+  "codigo": "ABC12345"
+}
+
+Error 401 – Usuario ya existe
+POST http://localhost:8080/biblioteca/ingresar
+{
+  "codigo": "ABC12345"
+}
+
+Salida usuario (OK)
+DELETE http://localhost:8080/biblioteca/salida
+{
+  "codigo": "ABC12345"
+}
+
+Error 404 – Usuario no existe
+DELETE http://localhost:8080/biblioteca/salida
+{
+  "codigo": "NOEXISTE1"
+}
+
+Consultar usuarios (OK)
+GET http://localhost:8080/biblioteca
+MyFlag: true
+[
+  {
+    "id": 1,
+    "codigo": "ABC12345"
+  }
+]
+
+Error 500 – Error interno
+GET http://localhost:8080/biblioteca
