@@ -14,7 +14,7 @@ public class GlobalExceptionHandler {
                 .body(new ApiError(ex.getCode(), ex.getMessage()));
     }
 
-    // ESTA PARTE ES LA QUE TE FALTABA
+
     @ExceptionHandler(InvalidCodeException.class)
     public ResponseEntity<ApiError> handleInvalidCode(InvalidCodeException ex) {
         return ResponseEntity
